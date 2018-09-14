@@ -2,15 +2,15 @@
 
 ## Overview
 
-To provide access to user's native operating system services,
+To provide access to a user's native operating system services,
 `Kotlin/Native` distribution includes a set of prebuilt libraries specific to
 each target. We call them **Platform Libraries**.
 
 ### POSIX bindings
 
-For all `Unix` or `Windows` based targets (including `Android` and
+For all `Unix` and `Windows` based targets (including `Android` and
 `iPhone`) we provide the `posix` platform lib. It contains bindings
-to platform's implementation of `POSIX` standard.
+to the platform's implementation of the `POSIX` standard.
 
 To use the library just 
 
@@ -25,7 +25,7 @@ are a little different.
 ### OS specific libraries
 
 We've gone a little further and provided access to more specific
-native OS services. One needs to import the proper packages
+native OS services. You need to import the proper packages
 on each of the platform. Choose what matches your target platform:
 
     import platform.osx.*
@@ -41,13 +41,13 @@ on each of the platform. Choose what matches your target platform:
 ### Popular native libraries
 
 There are many more platform libraries available for host and
-cross-compilation targets.  `Kotlin/Native` distribution provides access to
+cross-compilation targets. `Kotlin/Native` distribution provides access to
 `OpenGL`, `SDL`, `zlib` and other popular native libraries on
 applicable platforms.
 
-On Apple platforms `objc` library is provided for interoperability with [Objective-C](https://en.wikipedia.org/wiki/Objective-C).
+On Apple platforms the `objc` library is provided for interoperability with [Objective-C](https://en.wikipedia.org/wiki/Objective-C).
 
-Inspect the contents of `dist/klib/platform/$target` of the distribution for the details.
+Inspect the contents of `dist/klib/platform/$target` from the distribution for the details.
 
 ## Availability by default
 
@@ -57,7 +57,7 @@ compiler automatically detects which of the platform libraries have
 been accessed and automatically links the needed libraries.
 
 On the other hand, the platform libs in the distribution are merely
-just wrappers and bindings to the native libraries.  That means the
+just wrappers and bindings to the native libraries. That means that the
 native libraries themselves (`.so`, `.a`, `.dylib`, `.dll` etc)
 should be installed on the machine.
 
